@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: url(https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+.day{
+    --primary-color: #006666;
+    --border-color: #00b6b6;
+    --icon-button-color: #808080;
+    --background-primary-color: #f5f5f5;
+    --background-secondary-color: #ffffff;
+    --shadow-color: #00ffff3d;
+}
+body, main {width: 100vw; height: 100vh;}
+main {
+    display: grid;
+    place-items: center;
+}
+.container {
+    min-height: 400px;
+    max-width: 450px;
+    height: 55vh;
+    width: 30vw;
+    padding: 15px;
+    background-color: #ffffffa0;
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    box-shadow: 3px 5px .5em .1em rgba(0, 0, 0, 0.5);
+}
+.header {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 10px;
+    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
+    border-image-slice: 1;
+}
+.header h1{
+    font-size: 20pt;
+    color: var(--primary-color);
+}
+.header label {
+    display: flex;
+    width: 100%;
+    border: 1px solid;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    transition: .5s all;
+}
+.header label input, .header label button {
+    height: 100%;
+    border-radius: none;
+    background-color: var(--background-primary-color);
+    transition: .5s;
+    border: none;
+}
+.header label input {
+    width: 85%;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    padding: 0 10px;
+}
+.header label input:focus {outline: none}
+.header .in-focus {
+    box-shadow: 0 0 .2em .1em var(--shadow-color);
+}
+.header label button {
+    width: 15%;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    color: var(--icon-button-color);
+}
