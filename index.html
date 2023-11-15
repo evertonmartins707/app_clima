@@ -30,17 +30,53 @@
                 </label>
             </header>
             <!-- Conteúdo principal -->
-            <pre class="object_user"></pre>
-            <!-- Conteúdo adcional -->
+            <section class="main-content">
+                <div class="current-prevision">
+                    <!-- Data e Hora -->
+                    <div class="current-prevision-times">
+                        <div class="prevision-date">00 / 00 / 0000</div>
+                        <div class="prevision-time">00:00</div>
+                    </div>
+                    <!-- Temperatura -->
+                    <div class="temperature-content">
+                        <!-- Imagem -->
+                        <img src="" alt="imagem do tempo">
+                        <!-- Temperatura -->
+                        <h2 class="temperature">0ºC</h2>
+                    </div>
+                    <!-- Mais informações -->
+                    <div class="more-informations">
+                        <!-- Descrição -->
+                        <div class="description">Parcialmente Nublado</div>
+                        <!-- Umidade -->
+                        <div class="humidity">Umidade: 35%</div>
+                        <!-- Máxima e mínima -->
+                        <div class="polaritys-day">
+                            <div class="max-polarity">
+                                <sup>Max:</sup> 32ºC 
+                            </div>
+                            <div class="min-polarity">
+                                <sup>Min:</sup> 16ºC
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Previsão de 7 dias -->
+            <section class="weekly-forecasts">
+                <!-- Data -->
+                <!-- Temperatura -->
+                <!-- Máximo e Mínimo -->
+            </section>
             <!-- Rodapé -->
         </div>
     </main>
     <script>
+
         let inputSearch = document.querySelector("#search_Field")
         const labelSearch = document.querySelector("#label_Search")
         
         inputSearch.addEventListener("focus", function(){labelSearch.classList.add("in-focus")})
-
         inputSearch.addEventListener("focusout", function(){labelSearch.classList.remove("in-focus")})
         
     </script>
