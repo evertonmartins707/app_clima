@@ -10,8 +10,8 @@
     <!-- Folhas de estilo -->
     <link rel="stylesheet" href="view/styles/style.css">
     <!-- Scripts -->
-    <script src="./view/js/script.js" defer></script>
-    <script src="./view/js/api_weather.js" defer></script>
+    <script type="module" src="./view/js/script.js" defer></script>
+    <script type="module" src="./view/js/api_weather.js" defer></script>
     <!-- Font Awesome; Importação da fonte de caracteres especiais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,7 +22,7 @@
             <!-- Cabeçalho do APP -->
             <header class="header" id="header-App">
                 <!-- Cidade -->
-                <h1>Cidade</h1>
+                <h1 id="city_name">Cidade</h1>
                 <!-- Campo de busca -->
                 <label for="search" id="label_Search">
                     <input type="search" name="search" id="search_Field">

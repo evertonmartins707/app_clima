@@ -1,13 +1,21 @@
 {
   "name": "clima",
   "version": "1.0.0",
-  "description": "",
+  "description": "v1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Everton Martins",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evertonmartins707/app_clima.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evertonmartins707/app_clima/issues"
+  },
+  "homepage": "https://github.com/evertonmartins707/app_clima#readme"
 }

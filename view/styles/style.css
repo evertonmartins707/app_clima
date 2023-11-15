@@ -41,8 +41,12 @@ main {
     border-image-slice: 1;
 }
 .header h1{
-    font-size: 20pt;
+    font-size: calc(50% + 1.2vw);
     color: var(--primary-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 .header label {
     display: flex;
@@ -51,6 +55,7 @@ main {
     border: 1px solid var(--border-color);
     border-radius: 25px;
     transition: .5s all;
+    height: 35px;
 }
 .header label input, .header label button {
     height: 100%;

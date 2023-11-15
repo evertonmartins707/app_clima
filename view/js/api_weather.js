@@ -12,7 +12,7 @@ const valuesRequireds = ["temp", "date", "time", "city", "max", "min", "descript
 
 // -----------------------
 
-module.export const resultApi = (value_city) => {
+export const resultApi = (value_city) => {
     const result = fetch(`${api.baseApi}?format=${api.returnFormat}&array_limit=7&fields=only_results,${valuesRequireds}&key=${api.key}&city_name=${value_city}`)
     .then((res) => res.json())
     .then((data) => {
