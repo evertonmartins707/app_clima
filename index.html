@@ -25,7 +25,7 @@
                 <h1 id="city_name">Cidade</h1>
                 <!-- Campo de busca -->
                 <label for="search" id="label_Search">
-                    <input type="search" name="search" id="search_Field">
+                    <input type="search" name="search" id="search_Field" autocomplete="off">
                     <button id="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </label>
             </header>
@@ -40,22 +40,22 @@
                     <!-- Temperatura -->
                     <div class="temperature-content">
                         <!-- Imagem -->
-                        <img src="" alt="imagem do tempo">
+                        <img src="" alt="imagem do tempo" id="climate_image">
                         <!-- Temperatura -->
-                        <h2 class="temperature">0ºC</h2>
+                        <h2 class="temperature" id="temperature">0ºC</h2>
                     </div>
                     <!-- Mais informações -->
                     <div class="more-informations">
                         <!-- Descrição -->
-                        <div class="description">Parcialmente Nublado</div>
+                        <div class="description" id="prevision-description">Parcialmente Nublado</div>
                         <!-- Umidade -->
-                        <div class="humidity">Umidade: 35%</div>
+                        <div class="humidity" id="prevision-humidity">Umidade: 35%</div>
                         <!-- Máxima e mínima -->
                         <div class="polaritys-day">
-                            <div class="max-polarity">
+                            <div class="max-polarity" id="max_temperature">
                                 <sup>Max:</sup> 32ºC 
                             </div>
-                            <div class="min-polarity">
+                            <div class="min-polarity" id="min_temperature">
                                 <sup>Min:</sup> 16ºC
                             </div>
                         </div>
