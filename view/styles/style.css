@@ -7,9 +7,11 @@ html {
     background: url(https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_1280.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .day{
     --primary-color: #006666;
+    --secondary-color: #093d3d;
     --border-color: #00b6b6;
     --icon-button-color: #808080;
     --background-primary-color: #f5f5f5;
@@ -35,10 +37,9 @@ main {
 .header {
     display: flex;
     gap: 20px;
-    border-bottom: 1px solid transparent;
     padding-bottom: 10px;
-    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
-    border-image-slice: 1;
+    border-bottom: 1px solid rgba(58, 58, 58, 0.226);
+    margin-bottom: 10px;
 }
 .header h1{
     font-size: calc(50% + 1.2vw);
@@ -85,9 +86,11 @@ main {
 
 .main-content {
     height: 50%;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
+    border-image-slice: 1;
 }
 .current-prevision {
-    border: 1px solid;
     height: 100%;
     width: 100%;
     display: flex;
@@ -97,7 +100,6 @@ main {
 }
 .current-prevision > div {
     width: 100%;
-    border: 1px solid;
     margin: 0;
 }
 .current-prevision-times {
@@ -115,6 +117,22 @@ main {
     align-items: center;
     justify-content: center;
 }
+.temperature, #climate_image {
+    position: relative;
+}
+.temperature {
+    color: var(--primary-color);
+    top: -5px;
+    right: 5px;
+    font-size: 26pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+}
+#climate_image {
+    left: 5px;
+    width: 90px;
+    height: 90px;
+}
 .more-informations {
     display: flex;
     gap: 5px;
@@ -123,8 +141,48 @@ main {
 .more-informations > div {
     width: 32%;
     text-align: center;
+    border: 0;
+    border-left: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(to top, transparent, var(--border-color), transparent);
+    border-image-slice: 1;
+    color: var(--secondary-color);
 }
-
+.polaritys-day > div{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: flex-start;
+}
 sup {
     font-size: 9pt;
+}
+/* Weekly Forecasts */
+
+/* Rodapé */
+footer {
+    position: absolute;
+    bottom: 15px;
+    width: 90%;
+    text-align: center;
+    color: var(--secondary-color);
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
+    border-image-slice: 1;
+}
+.social-media-list {
+    margin-top: 5px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.social-media-list-item-link{
+    color: var(--secondary-color);
+    transition: .5s;
+}
+.social-media-list-item-link:hover{
+    color: var(--border-color);
 }

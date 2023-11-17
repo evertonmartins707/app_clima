@@ -6,9 +6,9 @@ const citySearch = document.querySelector("#search_Field");
 const btnSearch = document.querySelector("#btn_search");
 
 // Elements HTML for view
-const imageClimate = document.querySelector("#climate_image");
-const timeActually = document.querySelector(".prevision-time");
 const dateActually = document.querySelector(".prevision-date");
+const timeActually = document.querySelector(".prevision-time");
+const imageClimate = document.querySelector("#climate_image");
 const temperature = document.querySelector("#temperature");
 const previsionDescription = document.querySelector("#prevision-description");
 const previsionHumidity = document.querySelector("#prevision-humidity");
@@ -23,18 +23,27 @@ btnSearch.addEventListener("click", requestApi)
 
 // Funtions
 async function requestApi() {
-    const city = citySearch.value
-    const objectData = await weatherApi.resultApi(city);
+    const city = citySearch.value // Recebe o nome da cidade digitada no 'input'
+    const resultApi = await weatherApi.resultApi(city); // Faz a chamada da API 
 
-    view(objectData);
+    if (resultApi["results"]){
+        view(resultApi["results"]);
+    } else {
+        view(resultApi)
+    }
 };
 
 function view(objectData){
+    const image = `https://assets.hgbrasil.com/weather/icons/conditions/${objectData["condition_slug"]}.svg` // Recebe o caminho da imagem do clima
+    const otherTemps = objectData["forecast"]
+    const maxTemperature = otherTemps[0]
+    console.log(otherTemps[0])
     titleCity.innerHTML = objectData["city"] // Este 'city' é uma propriedade do objeto e não a variável
-    
-    let image = `https://assets.hgbrasil.com/weather/icons/conditions/${objectData["condition_slug"]}.svg` // Recebe o caminho da imagem do clima
-
+    temperature.innerHTML = `${objectData["temp"]}ºC`
     imageClimate.setAttribute("src", image)
+    previsionDescription.innerHTML = objectData["description"]
+    previsionHumidity.innerHTML = `Humidade: ${objectData["humidity"]}%`
+    previsionTemperatureMax.innerHTML = `${maxTemperature["max"]}ºC`
+    previsionTemperatureMin.innerHTML = `${maxTemperature["min"]}ºC`
     console.log(objectData)
-    
 }
