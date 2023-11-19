@@ -12,6 +12,7 @@ html {
 .day{
     --primary-color: #006666;
     --secondary-color: #093d3d;
+    --terciary-color: #4b7272;
     --border-color: #00b6b6;
     --icon-button-color: #808080;
     --background-primary-color: #f5f5f5;
@@ -26,6 +27,9 @@ main {
 .container {
     min-height: 400px;
     max-width: 450px;
+    display: grid;
+    grid-template-rows: 11% 50% 27% 12%;;
+    place-items: center;
     height: 55vh;
     width: 30vw;
     padding: 15px;
@@ -85,10 +89,7 @@ main {
 /* Main */
 
 .main-content {
-    height: 50%;
-    border-bottom: 1px solid transparent;
-    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
-    border-image-slice: 1;
+    height: 100%;
 }
 .current-prevision {
     height: 100%;
@@ -142,12 +143,6 @@ main {
     width: 32%;
     text-align: center;
     border: 0;
-    border-left: 1px;
-    border-right: 1px;
-    border-style: solid;
-    border-color: transparent;
-    border-image: linear-gradient(to top, transparent, var(--border-color), transparent);
-    border-image-slice: 1;
     color: var(--secondary-color);
 }
 .polaritys-day > div{
@@ -160,17 +155,53 @@ sup {
     font-size: 9pt;
 }
 /* Weekly Forecasts */
+.weekly-forecasts {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 2px 10px;
+    width: 100%;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
+    border-image-slice: 1;
 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, ;
+    color: var(--terciary-color);
+}
+.weekly-forecasts-day {
+    display: flex;
+    flex-direction: column;
+}
+.weekly-forecasts-day time {
+    font-size: 8pt;
+}
+.weekly-forecasts-day > p {
+    font-size: 14pt;
+    font-weight: 700;
+    margin: 2.5px 0;
+    color: var(--primary-color);
+}
+.forecasts-polaritys {
+    display: flex;
+    font-size: 9pt;
+    gap: 5px;
+}
+.forecasts-polaritys div {
+    display: grid;
+}
+.border-forecast{
+    display: inline;
+    width: 1px;
+    height: 3em;
+    background-color: var(--icon-button-color);
+}
 /* Rodapé */
 footer {
-    position: absolute;
-    bottom: 15px;
     width: 90%;
     text-align: center;
     color: var(--secondary-color);
-    border-top: 1px solid transparent;
-    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
-    border-image-slice: 1;
 }
 .social-media-list {
     margin-top: 5px;

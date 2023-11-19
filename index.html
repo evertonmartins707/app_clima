@@ -10,7 +10,9 @@
     <!-- Folhas de estilo -->
     <link rel="stylesheet" href="view/styles/style.css">
     <!-- Scripts -->
+    <script src="./view/js/time.js" defer></script>
     <script type="module" src="./view/js/script.js" defer></script>
+    <script type="module" src="./view/js/forecasts.js" defer></script>
     <script type="module" src="./view/js/api_weather.js" defer></script>
     <!-- Font Awesome; Importação da fonte de caracteres especiais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -63,10 +65,27 @@
                 </div>
             </section>
             <!-- Previsão de 7 dias -->
-            <section class="weekly-forecasts">
-                <!-- Data -->
-                <!-- Temperatura -->
-                <!-- Máximo e Mínimo -->
+            <section class="weekly-forecasts" id="weekly-forecasts">
+                <div class="weekly-forecasts-day">
+                    <!-- Data -->
+                    <time id="forecast-data">18/11</time>
+                    <!-- Temperatura -->
+                    <p class="forecast-temp">30ºC</p>
+                    <!-- Máximo e Mínimo -->
+                    <div class="forecasts-polaritys">
+                        <!-- Máxima -->
+                        <div class="forecasts-polaritys-max">
+                            <sup>Max:</sup>
+                            <p id="forecast-max-temp">32ºC</p>
+                        </div>
+                        <!-- Mínima -->
+                        <div class="forecasts-polaritys-min">
+                            <sup>Min:</sup>
+                            <p id="forecast-min-temp">16ºC</p>
+                        </div>
+                    </div>
+                </div>
+                <span class="border-forecast"></span>
             </section>
             <!-- Rodapé -->
             <footer>
