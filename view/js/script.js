@@ -21,8 +21,8 @@ const keyPressed = () => {var tecla = event.keyCode;if(tecla === 13){requestApi(
 // btnSearch.addEventListener("click", requestApi)
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // const resultApi = await weatherApi.resultApiWoeid();
-    // view(resultApi)
+    const resultApi = await weatherApi.resultApiWoeid();
+    view(resultApi["results"])
 });
 
 // Funtions

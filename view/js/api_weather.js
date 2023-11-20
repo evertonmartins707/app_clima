@@ -27,7 +27,7 @@ export const resultApiCity = (value_city) => {
 
 export const resultApiWoeid = () => {
     try {
-        const result = fetch(`${api.baseApi}?format=${api.returnFormat}&woeid=455828`) // Link de chamada para API seguindo todos os parâmetros
+        const result = fetch(`${api.baseApi}?format=${api.returnFormat}&woeid=455819`) // Link de chamada para API seguindo todos os parâmetros
         .then((res) => res.json()) // Retorna o resultadcurrent previsiono em um arquivo JSON
         .then((data) => { // Obtém os dados do arquivo JSON
             return data;
