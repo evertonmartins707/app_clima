@@ -17,8 +17,8 @@ const previsionTemperatureMin = document.querySelector("#min_temperature");
 // Events
 const keyPressed = () => {var tecla = event.keyCode;if(tecla === 13){requestApi()}}
 
-// document.addEventListener("keydown", keyPressed)
-// btnSearch.addEventListener("click", requestApi)
+document.addEventListener("keydown", keyPressed)
+btnSearch.addEventListener("click", requestApi)
 
 document.addEventListener("DOMContentLoaded", async () => {
     const resultApi = await weatherApi.resultApiWoeid();

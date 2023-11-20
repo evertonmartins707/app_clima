@@ -5,7 +5,7 @@
 // Objeto da API
 const api = {
     baseApi: 'https://api.hgbrasil.com/weather', // EndPoint base
-    key: 'd73801b3', // Chave de acesso
+    key: '9abe5bea', // Chave de acesso
     returnFormat: 'json-cors' // Formato de resposta
 };
 // Palavras-chave de informações de resposta da API
