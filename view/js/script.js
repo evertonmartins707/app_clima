@@ -40,8 +40,8 @@ async function requestApi() {
 
 function view(objectData){
     console.log(objectData)
-    const image = `https://assets.hgbrasil.com/weather/icons/conditions/${objectData["condition_slug"]}.svg` // Recebe o caminho da imagem do clima
     console.log(objectData["condition_slug"])
+    const image = `https://assets.hgbrasil.com/weather/icons/conditions/${objectData["condition_slug"]}.svg` // Recebe o caminho da imagem do clima
     const otherTemps = objectData["forecast"]
     console.log(otherTemps)
     forecast.viewForecasts(otherTemps)
