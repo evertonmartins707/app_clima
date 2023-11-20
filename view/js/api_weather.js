@@ -9,7 +9,7 @@ const api = {
     returnFormat: 'json-cors' // Formato de resposta
 };
 // Palavras-chave de informações de resposta da API
-const valuesRequireds = ["temp", "date", "time", "city", "max", "min", "description", "currently", "humidity", "forecast", "condition_slug" ]
+const valuesRequireds = ["temp", "date", "time", "city", "max", "min", "description", "currently", "humidity", "forecast", "condition_slug", "condition" ]
 
 // -----------------------
 
