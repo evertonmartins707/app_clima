@@ -25,10 +25,9 @@ main {
     place-items: center;
 }
 .container {
-    min-height: 400px;
     display: grid;
-    grid-template-rows: 11% 50% 27% 12%;;
-    height: 60vh;
+    grid-template-rows: 11% 46% 32% 12%;;
+    min-height: 60vh;
     padding: 15px;
     background-color: #ffffffa0;
     backdrop-filter: blur(5px);
@@ -155,6 +154,7 @@ sup {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 10px 0;
 }
 .weekly-forecasts {
     display: flex;
@@ -162,9 +162,8 @@ sup {
     text-align: center;
     gap: 20px;
     width: 100%;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-image: linear-gradient(to right, transparent, var(--border-color), transparent);
+    /* border-top: 1px solid rgba(58, 58, 58, 0.226); */
+    /* border-bottom: 1px solid rgba(58, 58, 58, 0.226); */
     border-image-slice: 1;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
