@@ -15,7 +15,7 @@ const previsionTemperatureMax = document.querySelector("#max_temperature");
 const previsionTemperatureMin = document.querySelector("#min_temperature");
 
 // Events
-const keyPressed = () => {var tecla = event.keyCode;if(tecla === 13){requestApi()}}
+const keyPressed = () => {var tecla = event.keyCode;if(tecla === 13){requestApi()}} // Verifica se foi pressionada a tecla 'enter'
 
 document.addEventListener("keydown", keyPressed)
 btnSearch.addEventListener("click", requestApi)
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     view(resultApi["results"])
 });
 
-// Funtions
+// Functions
 async function requestApi() {
     const city = citySearch.value // Recebe o nome da cidade digitada no 'input'
     const resultApi = await weatherApi.resultApiCity(city); // Faz a chamada da API 
@@ -41,14 +41,14 @@ function view(objectData){
     const image = `https://assets.hgbrasil.com/weather/icons/conditions/${objectData["condition_slug"]}.svg` // Recebe o caminho da imagem do clima
     const otherTemps = objectData["forecast"]
     forecast.viewForecasts(otherTemps)
-    const maxTemperature = otherTemps[0]
+    const polaritysTemperatures = otherTemps[0]
 
     titleCity.innerHTML = objectData["city"] // Este 'city' é uma propriedade do objeto e não a variável
     temperature.innerHTML = `${objectData["temp"]}ºC`
     imageClimate.setAttribute("src", image)
     previsionDescription.innerHTML = objectData["description"]
     previsionHumidity.innerHTML = `Humidade: ${objectData["humidity"]}%`
-    previsionTemperatureMax.innerHTML = `${maxTemperature["max"]}ºC`
-    previsionTemperatureMin.innerHTML = `${maxTemperature["min"]}ºC`
+    previsionTemperatureMax.innerHTML = `${polaritysTemperatures["max"]}ºC`
+    previsionTemperatureMin.innerHTML = `${polaritysTemperatures["min"]}ºC`
 
 }
