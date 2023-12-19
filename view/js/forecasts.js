@@ -1,6 +1,7 @@
 const sectionWeeklyForecasts = document.querySelector("#weekly-forecasts")
 
 export function viewForecasts(forecast) {
+    sectionWeeklyForecasts.innerHTML = '';
     for(let i=0; i<7; i++){
         sectionWeeklyForecasts.innerHTML += `
         <div class="weekly-forecasts-day">

@@ -1,0 +1,10 @@
+@media screen and (max-width: 468px)  {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 80vh;}
+    .header h1 {font-size: calc(100% + 1.2vw)}
+    /* .weekly-forecasts{flex-direction: column;} */
+    footer {font-size: 10pt;}
+}
