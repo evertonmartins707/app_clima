@@ -1,4 +1,4 @@
-// Variáveis
+// Variáveis / Variables
 let date = new Date();
 let day, month, year = undefined
 const backgroudPhotos = {
@@ -7,28 +7,37 @@ const backgroudPhotos = {
     "night": "https://cdn.pixabay.com/photo/2015/04/23/21/59/hot-air-balloon-736879_1280.jpg"
 }
 
-// Elementos HTML
+// Elementos HTML / Elements HTML
 const dateActually = document.querySelector(".prevision-date");
 const timeActually = document.querySelector(".prevision-time");
 const htmlTag = document.querySelector("html")
 
+// Data e hora / Date and hours
 setInterval(() => {
-    day = format(date.getDate()) // Recebe o dia
-    month = format(date.getMonth()+1) // Recebe o mês
-    year = date.getFullYear() // Recebe o ano
+    day = format(date.getDate()) // Recebe o dia / Receive the day
+    month = format(date.getMonth()+1) // Recebe o mês / Receive the month
+    year = date.getFullYear() // Recebe o ano / Receive the year
 
-    dateActually.innerHTML = `${day}/${month}/${year}` // Data atual
-    timeActually.innerHTML = `${format(date.getHours())}:${format(date.getMinutes())}` // Hora atual
+    dateActually.innerHTML = `${day}/${month}/${year}` // Data atual / Actually date
+    timeActually.innerHTML = `${format(date.getHours())}:${format(date.getMinutes())}` // Hora atual / Actually hour
 }, 1000);
 
+// Plano de fundo e cores / Background and colors
 if(date.getHours < 17){
+    // Manhã / Morning
     htmlTag.setAttribute("style", `background: url(${backgroudPhotos["morning"]})`)
+
     htmlTag.classList.add("day")
     htmlTag.classList.remove("night")
+
 } else if(date.getHours == 17){
+    // Pôr do Sol / Sunset
     htmlTag.setAttribute("style", `background: url(${backgroudPhotos["sunset"]})`)
+
 } else {
+    // Noite / Night
     htmlTag.setAttribute("style", `background: url(${backgroudPhotos["night"]})`)
+
     htmlTag.classList.remove("day")
     htmlTag.classList.add("night")
 }
