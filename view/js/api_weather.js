@@ -27,6 +27,7 @@ export const resultApiCity = (value_city) => {
 // Chamada por WOEID
 export const resultApiWoeid = () => {
     const result = fetch(`${api.baseApi}?format=${api.returnFormat}&woeid=455819`, {
+        method: 'GET',
         headers: {
             'Content-Type': 'Application/json',
             'Access-Control-Allow-Origin': '*'
