@@ -18,8 +18,8 @@ setInterval(() => {
     month = format(date.getMonth()+1) // Recebe o mês / Receive the month
     year = date.getFullYear() // Recebe o ano / Receive the year
 
-    dateActually.innerHTML = `${day}/${month}/${year}` // Data atual / Actually date
-    timeActually.innerHTML = `${format(date.getHours())}:${format(date.getMinutes())}` // Hora atual / Actually hour
+    dateActually.innerHTML = `${day}/${month}/${year}` // Data atual / Current date
+    timeActually.innerHTML = `${format(date.getHours())}:${format(date.getMinutes())}` // Hora atual / Current time
 }, 1000);
 
 // Plano de fundo e cores / Background and colors
