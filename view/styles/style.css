@@ -4,21 +4,30 @@
     box-sizing: border-box;
 }
 html {
-    background: url(https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_1280.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.day{
+.day {
     --primary-color: #006666;
     --secondary-color: #093d3d;
     --terciary-color: #4b7272;
-    --border-color: #00b6b6;
     --icon-button-color: #808080;
     --background-primary-color: #f5f5f5;
-    --background-secondary-color: #ffffff;
+    --background-secondary-color: #ffffffa0;
     --shadow-color: #00ffff3d;
 }
+.night {
+    --primary-color: #00eeff;
+    --secondary-color: #fff;
+    --terciary-color: #00aeff;
+    --icon-button-color: #00b7ff;
+    --background-primary-color: #262626;
+    --shadow-color: #287eff3d;
+}
+.night .current-prevision-times{color: var(--terciary-color)}
+.night .weekly-forecasts-day {text-shadow: 0 0 10px #000000;}
+.night .weekly-forecasts-day img {filter: drop-shadow(0 0 5px #000000a6);}
 body, main {width: 100vw; height: 100vh;}
 main {
     display: grid;
@@ -29,7 +38,7 @@ main {
     grid-template-rows: 11% 46% 32% 12%;;
     min-height: 60vh;
     padding: 15px;
-    background-color: #ffffffa0;
+    background-color: var(--background-secondary-color);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     box-shadow: 3px 5px .5em .1em rgba(0, 0, 0, 0.5);
@@ -201,7 +210,7 @@ sup {
 }
 /* Rodapé */
 footer {
-    width: 90%;
+    width: 100%;
     text-align: center;
     color: var(--secondary-color);
 }

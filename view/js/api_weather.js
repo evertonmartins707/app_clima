@@ -13,6 +13,7 @@ const valuesRequireds = ["temp", "date", "time", "city", "max", "min", "descript
 
 // -----------------------
 
+// Chamada por nome de cidade
 export const resultApiCity = (value_city) => {
     const result = fetch(`${api.baseApi}?format=${api.returnFormat}&array_limit=7&fields=only_results,${valuesRequireds}&key=${api.key}&city_name=${value_city}`) // Link de chamada para API seguindo todos os parâmetros
     .then((res) => res.json()) // Retorna o resultadcurrent previsiono em um arquivo JSON
@@ -23,6 +24,7 @@ export const resultApiCity = (value_city) => {
     return result;
 }
 
+// Chamada por WOEID
 export const resultApiWoeid = () => {
     const result = fetch(`${api.baseApi}?format=${api.returnFormat}&woeid=455819`) // Link de chamada para API seguindo todos os parâmetros
     .then((res) => res.json()) // Retorna o resultadcurrent previsiono em um arquivo JSON
