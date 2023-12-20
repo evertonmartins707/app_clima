@@ -26,7 +26,12 @@ export const resultApiCity = (value_city) => {
 
 // Chamada por WOEID
 export const resultApiWoeid = () => {
-    const result = fetch(`${api.baseApi}?format=${api.returnFormat}&woeid=455819`) // Link de chamada para API seguindo todos os parâmetros
+    const result = fetch(`${api.baseApi}?format=${api.returnFormat}&woeid=455819`, {
+        headers: {
+            'Content-Type': 'Application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
+    }) // Link de chamada para API seguindo todos os parâmetros
     .then((res) => res.json()) // Retorna o resultadcurrent previsiono em um arquivo JSON
     .then((data) => { // Obtém os dados do arquivo JSON
         return data;
