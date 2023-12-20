@@ -23,14 +23,14 @@ setInterval(() => {
 }, 1000);
 
 // Plano de fundo e cores / Background and colors
-if(date.getHours < 17){
+if(date.getHours() < 17){
     // Manhã / Morning
     htmlTag.setAttribute("style", `background: url(${backgroudPhotos["morning"]})`)
 
     htmlTag.classList.add("day")
     htmlTag.classList.remove("night")
 
-} else if(date.getHours == 17){
+} else if(date.getHours() == 17){
     // Pôr do Sol / Sunset
     htmlTag.setAttribute("style", `background: url(${backgroudPhotos["sunset"]})`)
 
