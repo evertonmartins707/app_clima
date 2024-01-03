@@ -1,2 +1,4 @@
 # Ignore todos os arquivos .env
 *.env
+# Ignore o arquivo 'key.js'
+key.js

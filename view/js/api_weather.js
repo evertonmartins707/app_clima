@@ -2,12 +2,12 @@
 // Site da API: https://hgbrasil.com/
 // Documentação: https://console.hgbrasil.com/documentation/weather
 
-import 'dotenv/config'
+import KEY_API from "./key.js"
 
 // Objeto da API
 const api = {
     baseApi: 'https://api.hgbrasil.com/weather', // EndPoint base
-    key: `${process.env.KEY_API}`, // Chave de acesso
+    key: `${KEY_API}`, // Chave de acesso
     returnFormat: 'json-cors' // Formato de resposta
 };
 // Palavras-chave de informações de resposta da API
