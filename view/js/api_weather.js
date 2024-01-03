@@ -2,7 +2,8 @@
 // Site da API: https://hgbrasil.com/
 // Documentação: https://console.hgbrasil.com/documentation/weather
 
-import KEY_API from "./key.js"
+import { key } from "./key.js"
+const KEY_API = key
 
 // Objeto da API
 const api = {
