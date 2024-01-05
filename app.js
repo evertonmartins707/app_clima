@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const path = require('path');
 require('dotenv').config();
 
@@ -13,9 +13,6 @@ app.use(cors());
 app.use(express.json());
 
 // Rotas | Routers
-app.get('/controllers/get_api.js', (req, res) => {
-	res.sendFile(path.join(__dirname, '/controllers/get_api.js'));
-});
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'index.html'));
 });
