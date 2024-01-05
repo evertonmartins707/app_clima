@@ -1,9 +1,0 @@
-@media screen and (max-width: 468px)  {
-    .container {
-        display: flex;
-        flex-direction: column;
-        width: 95vw;
-    }
-    .header h1 {font-size: calc(100% + 1.2vw)}
-    footer {font-size: 10pt; margin-top: 10px;}
-}

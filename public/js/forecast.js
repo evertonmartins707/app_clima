@@ -1,10 +1,10 @@
-const sectionWeeklyForecasts = document.querySelector("#weekly-forecasts")
+const sectionWeeklyForecasts = document.querySelector('#weekly-forecasts');
 
 export function viewForecasts(forecast) {
-    sectionWeeklyForecasts.innerHTML = '';
+	sectionWeeklyForecasts.innerHTML = '';
 
-    for(let i=0; i<7; i++){
-        sectionWeeklyForecasts.innerHTML += `
+	for (let i = 0; i < 7; i++) {
+		sectionWeeklyForecasts.innerHTML += `
         <div class="weekly-forecasts-day">
             <time id="forecast-data">${forecast[i].date}</time> <!-- Data da previsão | Forecast date -->
             <img src="https://assets.hgbrasil.com/weather/icons/conditions/${forecast[i].condition}.svg"> <!-- Imagem da previsão | Forecast image -->
@@ -18,6 +18,6 @@ export function viewForecasts(forecast) {
                     <p id="forecast-min-temp">${forecast[i].min}ºC</p>
                 </div>
             </div>
-        </div>`
-    }
+        </div>`;
+	}
 }
