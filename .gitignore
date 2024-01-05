@@ -7,3 +7,4 @@ require.js
 .eslintrc.json
 .http.rest
 .htaccess
+.env

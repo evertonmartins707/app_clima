@@ -78,6 +78,7 @@ main {
     border-right: none;
     border-radius: 25px 0 0 25px;
     padding: 0 10px;
+    color: var(--secondary-color);
 }
 .header label input:focus {outline: none}
 .header .in-focus {
