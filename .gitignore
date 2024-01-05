@@ -1,4 +1,9 @@
-# Ignore todos os arquivos .env
-*.env
-# Ignore o arquivo 'key.js'
-key.js
+node_modules
+require.js
+.flaskenv*
+!.env.project
+!.env.vault
+.prettierrc
+.eslintrc.json
+.http.rest
+.htaccess
