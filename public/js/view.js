@@ -5,8 +5,6 @@ import * as getApi from './get_api.js';
 const citySearch = document.querySelector('#search_Field');
 const btnSearch = document.querySelector('#btn_search');
 
-// Criar e realizar a chamada para minha API
-
 // Events
 const keyPressed = () => {
 	var tecla = event.keyCode;
