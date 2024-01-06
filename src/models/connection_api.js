@@ -7,7 +7,6 @@ require('dotenv').config();
 // Objeto da API
 const api = {
 	baseApi: 'https://api.hgbrasil.com/weather', // 'EndPoint' base
-	key: process.env.KEY_API,
 	returnFormat: 'json-cors', // Formato de resposta
 };
 // Palavras-chave de informações de resposta da API
