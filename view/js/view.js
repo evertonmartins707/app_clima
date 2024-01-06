@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const resultApi = await getApi.getApiWoeid();
 	if (resultApi['error']) {
 		alert(
-			`Error: ${resultApi['error']}! Não foi realizar a busca automática, tente pesquisar o nome da cidade!`,
+			`Error: ${resultApi['error']}! Não foi possível realizar a busca automática, tente pesquisar o nome da cidade!`,
 		);
 	}
 	view(resultApi['results']);
@@ -35,6 +35,10 @@ async function requestApi() {
 	} else {
 		alert(`Adicione pelo menos 1 letra para realizar a busca!`);
 		resultApi = await getApi.getApiWoeid(); // Faz a chamada da API
+	}
+
+	if(resultApi['error']){
+		alert(`Error: ${resultApi['error']}! Estamos com um problema interno, tente novamente amanhã!`)
 	}
 
 	if (resultApi['results']) {
