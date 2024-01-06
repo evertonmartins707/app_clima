@@ -32,13 +32,14 @@ async function requestApi() {
 	let resultApi = undefined;
 	if (city != '') {
 		resultApi = await getApi.getApiCity(city); // Faz a chamada da API
+		if (resultApi['error']) {
+			alert(
+				`Error: ${resultApi['error']}! Estamos com um problema interno, tente novamente amanhã!`,
+			);
+		}
 	} else {
 		alert(`Adicione pelo menos 1 letra para realizar a busca!`);
 		resultApi = await getApi.getApiWoeid(); // Faz a chamada da API
-	}
-
-	if(resultApi['error']){
-		alert(`Error: ${resultApi['error']}! Estamos com um problema interno, tente novamente amanhã!`)
 	}
 
 	if (resultApi['results']) {
