@@ -16,6 +16,7 @@ const requestApiCity = async (req, res) => {
 		);
 		if (data_response['error']) {
 			return res.status(503).json({
+				error: 503,
 				message: data_response['message'],
 			});
 		}
@@ -28,6 +29,7 @@ const requestApiWoeid = async (req, res) => {
 	let data_response = await requestApi.resultApiWoeid();
 	while (data_response['error']) {
 		return res.status(503).json({
+			error: 503,
 			results: {
 				temp: 0,
 				description: 'Serviço indisponível',
