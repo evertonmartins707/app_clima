@@ -18,13 +18,24 @@ btnSearch.addEventListener('click', requestApi);
 
 document.addEventListener('DOMContentLoaded', async () => {
 	const resultApi = await getApi.getApiWoeid();
+	if (resultApi['error']) {
+		alert(
+			`Error: ${resultApi['error']}! Não foi realizar a busca automática, tente pesquisar o nome da cidade!`,
+		);
+	}
 	view(resultApi['results']);
 });
 
 // Functions
 async function requestApi() {
 	const city = citySearch.value; // Recebe o nome da cidade digitada no 'input'
-	const resultApi = await getApi.getApiCity(city); // Faz a chamada da API
+	let resultApi = undefined;
+	if (city != '') {
+		resultApi = await getApi.getApiCity(city); // Faz a chamada da API
+	} else {
+		alert(`Adicione pelo menos 1 letra para realizar a busca!`);
+		resultApi = await getApi.getApiWoeid(); // Faz a chamada da API
+	}
 
 	if (resultApi['results']) {
 		view(resultApi['results']);

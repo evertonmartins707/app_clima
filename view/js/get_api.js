@@ -3,9 +3,12 @@
 // Realiza a chamada para à API
 
 export const getApiCity = (name_city) => {
-	const result = fetch(`https://apiweather-evertonmartins.onrender.com/${name_city}`, {
-		method: 'GET',
-	})
+	const result = fetch(
+		`https://apiweather-evertonmartins.onrender.com/${name_city}`,
+		{
+			method: 'GET',
+		},
+	)
 		.then((res) => res.json())
 		.then((data) => {
 			return data;

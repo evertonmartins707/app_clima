@@ -13,7 +13,7 @@ export function view(objectResponse) {
 	// Recebe a imagem do clima | Reiceve the weather image
 	const weatherimage = `https://assets.hgbrasil.com/weather/icons/conditions/${objectResponse['condition_slug']}.svg`;
 	const otherTemps = objectResponse['forecast']; // Recebe toda previsão semanal | Receive the entire weekly forecast
-	const polarityTemperatures = otherTemps[0]; // Recebe as temperaturas "max" e "min" do dia atual | Receives the "max" and "min" temperatures of the current day
+	const polarityTemperatures = otherTemps ? otherTemps[0] : { max: 0, min: 0 }; // Recebe as temperaturas "max" e "min" do dia atual | Receives the "max" and "min" temperatures of the current day
 
 	// Nome | Name
 	titleCity.innerHTML = objectResponse['city'];
@@ -35,5 +35,7 @@ export function view(objectResponse) {
 	previsionTemperatureMin.innerHTML = `${polarityTemperatures['min']}ºC`;
 
 	// Previsão semanal | Weekly forecast
-	viewForecasts(otherTemps);
+	if (otherTemps) {
+		viewForecasts(otherTemps);
+	}
 }
