@@ -25,7 +25,7 @@ const resultApiCity = (value_city, key) => {
 // Chamada por IP | Call by IP
 const resultApiIp = (key) => {
 	const result = fetch(
-		`${api.baseApi}?format=${api.returnFormat}&woeid=455819`,
+		`${api.baseApi}?key=${key}&user_ip=remote`,
 		{
 			method: 'GET',
 			cache: 'default',

@@ -71,7 +71,7 @@ const requestApiWoeid = async (req, res) => {
 	return res.status(200).json({
 		cod: 200,
 		response: data,
-		serverMessage: 'Sucesso!',
+		serverMessage: 'Pesquisa por IP',
 	});
 };
 
