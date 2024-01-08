@@ -28,7 +28,7 @@ const requestApiCity = async (req, res) => {
 // Realizar chamada para API 'weather' pelo código 'woeid'
 const requestApiWoeid = async (req, res) => {
 	let data = await requestApi.resultApiIp(process.env.KEY_IP);
-	if (data['error']) {
+	if (data['by'] === 'default') {
 		data = await requestApi.resultApiWoeid();
 		console.log(data);
 		if (data['error']) {
