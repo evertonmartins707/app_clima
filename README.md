@@ -1,19 +1,20 @@
 # APP CLIMA
 
-Deploy: [weatherapp-evertonmartins.netlify.app/](https://weatherapp-evertonmartins.netlify.app/)
+**Deploy:** [weatherapp-evertonmartins.netlify.app/](https://weatherapp-evertonmartins.netlify.app/)
 
 ## Desenvolvedor
 
-- Título: `APP CLIMA`
-- Autor: `Everton Martins`
-- LinkedIn: [linkedin.com/in/everton-martins-21160721a](https://www.linkedin.com/in/everton-martins-21160721a)
+- **Título:** APP CLIMA
+- **Autor:** Everton Martins
+- **LinkedIn:** [linkedin.com/in/everton-martins-21160721a](https://www.linkedin.com/in/everton-martins-21160721a)
 
 ## Descrição
-O projeto `APP CLIMA` é um projeto de estudos pessoal, criado para aprender sobre requisições em API's, ele emgloba o _frontend_ e o _backend_ para funcionamento, usando um servidor criado com a biblioteca EXPRESS do NODE JS.
 
-Seu funcionamento consiste em uma chamada á própria API localizada no _backend_, que por sua vez realiza uma chamada á HG Weather, API da HG BRASIL ([https://hgbrasil.com/status/weather](https://hgbrasil.com/status/weather)).
-- Para mais informações sobre o funcionamento do _backend_ verificar o README que se encontra na _branch_ 'backend'.
-[./app_clima/tree/backend](https://github.com/evertonmartins707/app_clima/tree/backend)
+O projeto APP CLIMA é um projeto pessoal de estudos, criado para aprender sobre requisições em APIs. Ele engloba o frontend e o backend para funcionamento, usando um servidor criado com a biblioteca Express do Node.js.
+
+Seu funcionamento consiste em uma chamada à própria API localizada no backend, que por sua vez realiza uma chamada à HG Weather, API da HG BRASIL ([https://hgbrasil.com/status/weather](https://hgbrasil.com/status/weather)).
+
+- Para mais informações sobre o funcionamento do backend, verificar o README que se encontra na branch 'backend'. [Link para o README da branch 'backend'](https://github.com/evertonmartins707/app_clima/tree/backend)
 
 Todo o sistema é implementado com funções de tratamento de erros por código:
 
@@ -21,48 +22,53 @@ Todo o sistema é implementado com funções de tratamento de erros por código:
 - 503: Serviço indisponível
 
 ## Deploy (Plataformas)
-- FrontEnd: [https://www.netlify.com/]()
-- BackEnd: [https://render.com/]()
+
+- **FrontEnd:** [Netlify](https://www.netlify.com/)
+- **BackEnd:** [Render](https://render.com/)
 
 ## Branchs
-Este projeto foi desenvolvido em um reposítorio apenas, os deploys são realizados em suas _branchs_  específicas.
-<hr>
 
-#### Main
-Na _branch_ 'MAIN' está localizado o _frontend_ do projeto.
+Este projeto foi desenvolvido em um repositório apenas, com deploys realizados em suas branches específicas.
 
-#### Backend
-Na _branch_ 'BACKEND' está localizado o _backend_ do projeto.
+### Main
 
-<br>
+Na branch 'MAIN' está localizado o frontend do projeto.
+
+### Backend
+
+Na branch 'BACKEND' está localizado o backend do projeto.
 
 ## Instalações e dependências
+
 ### Frontend
+
 - HTML 5
 - CSS 3
 - JavaScript
+
 ### Backend
-- Node JS (21.2.0)
-- NPM (9.7.1)
 
-### Depedências
-- Express (4.18.2)
-- DotEnv (16.3.1)
-- Cors (2.8.5)
+- Node JS (v21.2.0)
+- NPM (v9.7.1)
 
-### DevDepedências
-- Nodemon (3.0.2)
+### Dependências
 
-ATENÇÃO: Essas são as versões mínimas para funcionamento.
+- Express (v4.18.2)
+- DotEnv (v16.3.1)
+- Cors (v2.8.5)
 
-## Use
-- Para produção
-  ```
-  $ npm install --production
-  $ npm start
-  ```
-- Para desenvolvimento
-  ```
-  $ npm install
-  $ npm run dev
-  ```
+### DevDependências
+
+- Nodemon (v3.0.2)
+
+**ATENÇÃO:** Essas são as versões mínimas para funcionamento.
+
+## Uso
+
+### Para produção
+
+```bash
+$ npm install --production
+$ npm start
+
+### Para produção
