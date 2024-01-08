@@ -18,12 +18,13 @@ btnSearch.addEventListener('click', requestApi);
 
 document.addEventListener('DOMContentLoaded', async () => {
 	const resultApi = await getApi.getApiWoeid();
-	if (resultApi['error']) {
+	if (resultApi['cod'] != 200) {
 		alert(
-			`Error: ${resultApi['error']}! Não foi possível realizar a busca automática, tente pesquisar o nome da cidade!`,
+			`Error: ${resultApi['cod']}! Não foi possível realizar a busca automática, tente pesquisar o nome da cidade!`,
 		);
 	}
-	view(resultApi['results']);
+	alert("O serviço de localização automática está em teste, agradeçemos a compreensão")
+	view(resultApi['response'].results);
 });
 
 // Functions
@@ -32,9 +33,9 @@ async function requestApi() {
 	let resultApi = undefined;
 	if (city != '') {
 		resultApi = await getApi.getApiCity(city); // Faz a chamada da API
-		if (resultApi['error']) {
-			alert(
-				`Error: ${resultApi['error']}! Estamos com um problema interno, tente novamente amanhã!`,
+		if (resultApi['cod'] != 200) {
+			return alert(
+				`Error: ${resultApi['cod']}! Estamos com um problema interno, tente novamente amanhã!`,
 			);
 		}
 	} else {
@@ -42,9 +43,5 @@ async function requestApi() {
 		resultApi = await getApi.getApiWoeid(); // Faz a chamada da API
 	}
 
-	if (resultApi['results']) {
-		view(resultApi['results']);
-	} else {
-		view(resultApi);
-	}
+	view(resultApi['response']);
 }
