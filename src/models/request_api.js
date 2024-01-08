@@ -1,9 +1,8 @@
-const { request } = require('express');
-
+// Importações | Imports
 const { api } = require('./connection_api.js');
 const { valuesRequireds } = require('./connection_api.js');
 
-// Chamada por nome de cidade
+// Chamada por nome de cidade | Call by city name
 const resultApiCity = (value_city, key) => {
 	const result = fetch(
 		`${api.baseApi}?format=${api.returnFormat}&array_limit=7&fields=only_results,${valuesRequireds}&key=${key}&city_name=${value_city}`,
@@ -11,27 +10,39 @@ const resultApiCity = (value_city, key) => {
 			method: 'GET',
 			cache: 'default',
 		},
-	) // Link de chamada para API seguindo todos os parâmetros
+	)
 		.then((res) => res.json()) // Retorna o resultado em um arquivo JSON
 		.then((data) => {
 			// Obtém os dados do arquivo JSON
 			return data;
 		})
-		.catch((err) => alert('Não foi possível localizar a cidade', err));
+		.catch((err) => {
+			return err;
+		});
 	return result;
 };
 
+// Chamada por IP | Call by IP
 const resultApiIp = (key) => {
-	const result = fetch(`${api.baseApi}?key=${key}&user_ip=remote`)
-		.then((res) => res.json())
+	const result = fetch(
+		`${api.baseApi}?format=${api.returnFormat}&woeid=455819`,
+		{
+			method: 'GET',
+			cache: 'default',
+		},
+	)
+		.then((res) => res.json()) // Retorna o resultado em um arquivo JSON
 		.then((data) => {
+			// Obtém os dados do arquivo JSON
 			return data;
 		})
-		.catch((err) => console.log(err));
+		.catch((err) => {
+			return err;
+		});
 	return result;
 };
 
-// Chamada por WOEID
+// Chamada por WOEID | Call by WOEID
 const resultApiWoeid = () => {
 	const result = fetch(
 		`${api.baseApi}?format=${api.returnFormat}&woeid=455819`,
@@ -39,16 +50,19 @@ const resultApiWoeid = () => {
 			method: 'GET',
 			cache: 'default',
 		},
-	) // Link de chamada para API seguindo todos os parâmetros
+	)
 		.then((res) => res.json()) // Retorna o resultado em um arquivo JSON
 		.then((data) => {
 			// Obtém os dados do arquivo JSON
 			return data;
 		})
-		.catch((err) => alert('Não foi possível localizar a cidade', err));
+		.catch((err) => {
+			return err;
+		});
 	return result;
 };
 
+// -----------------------
 module.exports = {
 	resultApiCity,
 	resultApiWoeid,
