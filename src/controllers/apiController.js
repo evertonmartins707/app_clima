@@ -5,29 +5,30 @@ require('dotenv').config();
 // Realizar chamada para a API 'weather' pelo nome da cidade
 const requestApiCity = async (req, res) => {
 	const city_name = req.params.id;
-	let data_response = await requestApi.resultApiCity(
+	let data = await requestApi.resultApiCity(
 		city_name,
 		process.env.KEY_API,
 	);
-	while (data_response['error']) {
-		data_response = await requestApi.resultApiCity(
+	while (data['error']) {
+		data = await requestApi.resultApiCity(
 			city_name,
 			process.env.SECOND_KEY_API,
 		);
-		if (data_response['error']) {
+		if (data['error']) {
 			return res.status(503).json({
 				error: 503,
-				message: data_response['message'],
+				message: data['message'],
 			});
 		}
 	}
-	return res.status(200).json(data_response);
+	return res.status(200).json(data);
 };
 
 // Realizar chamada para API 'weather' pelo código 'woeid'
 const requestApiWoeid = async (req, res) => {
-	let data_response = await requestApi.resultApiWoeid();
-	while (data_response['error']) {
+	const data = await requestApi.resultApiWoeid();
+	console.log(data);
+	if (data['error']) {
 		return res.status(503).json({
 			error: 503,
 			results: {
@@ -40,7 +41,7 @@ const requestApiWoeid = async (req, res) => {
 		});
 	}
 
-	return res.status(200).json(data_response);
+	return res.status(200).json(data);
 };
 module.exports = {
 	requestApiCity,
