@@ -70,5 +70,11 @@ Na branch 'BACKEND' está localizado o backend do projeto.
 ```bash
 $ npm install --production
 $ npm start
+```
 
 ### Para produção
+
+```bash
+$ npm install
+$ npm run dev
+```
