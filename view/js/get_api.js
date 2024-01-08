@@ -7,6 +7,7 @@ export const getApiCity = (name_city) => {
 		`https://apiweather-evertonmartins.onrender.com/${name_city}`,
 		{
 			method: 'GET',
+			cache: 'default',
 		},
 	)
 		.then((res) => res.json())
@@ -19,6 +20,7 @@ export const getApiCity = (name_city) => {
 export const getApiWoeid = () => {
 	const result = fetch('https://apiweather-evertonmartins.onrender.com', {
 		method: 'GET',
+		cache: 'default',
 	})
 		.then((res) => res.json())
 		.then((data) => {

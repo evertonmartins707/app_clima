@@ -1,4 +1,4 @@
-// Variáveis / Variables
+// Variáveis | Variables
 let date = new Date();
 let day,
 	month,
@@ -12,26 +12,26 @@ const backgroudPhotos = {
 		'https://cdn.pixabay.com/photo/2015/04/23/21/59/hot-air-balloon-736879_1280.jpg',
 };
 
-// Elementos HTML / Elements HTML
+// Elementos HTML | HTML elements
 const dateActually = document.querySelector('.prevision-date');
 const timeActually = document.querySelector('.prevision-time');
 const htmlTag = document.querySelector('html');
 
-// Data e hora / Date and hours
-day = format(date.getDate()); // Recebe o dia / Receive the day
-month = format(date.getMonth() + 1); // Recebe o mês / Receive the month
-year = date.getFullYear(); // Recebe o ano / Receive the year
+// Data e hora | Date and hours
+day = format(date.getDate()); // Recebe o dia | Receive the day
+month = format(date.getMonth() + 1); // Recebe o mês | Receive the month
+year = date.getFullYear(); // Recebe o ano | Receive the year
 
-dateActually.innerHTML = `${day}/${month}/${year}`; // Data atual / Current date
+dateActually.innerHTML = `${day}/${month}/${year}`; // Data atual | Current date
 setInterval(() => {
 	timeActually.innerHTML = `${format(date.getHours())}:${format(
 		date.getMinutes(),
-	)}`; // Hora atual / Current time
+	)}`; // Hora atual | Current time
 }, 1000);
 
-// Plano de fundo e cores / Background and colors
+// Plano de fundo e cores | Background and colors
 if (date.getHours() < 17) {
-	// Manhã / Morning
+	// Manhã | Morning
 	htmlTag.setAttribute(
 		'style',
 		`background: url(${backgroudPhotos['morning']})`,
@@ -40,13 +40,13 @@ if (date.getHours() < 17) {
 	htmlTag.classList.add('day');
 	htmlTag.classList.remove('night');
 } else if (date.getHours() == 17) {
-	// Pôr do Sol / Sunset
+	// Pôr do Sol | Sunset
 	htmlTag.setAttribute(
 		'style',
 		`background: url(${backgroudPhotos['sunset']})`,
 	);
 } else {
-	// Noite / Night
+	// Noite | Night
 	htmlTag.setAttribute('style', `background: url(${backgroudPhotos['night']})`);
 
 	htmlTag.classList.remove('day');

@@ -1,114 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" class="day">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#093d3d"/>
-    
-    <title>Clima APP</title>
-    
-    <!-- Folhas de estilo -->
-    <link rel="stylesheet" href="view/styles/style.css">
-    <link rel="stylesheet" href="view/styles/style_mobile.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#093d3d" />
 
-    <!-- Scripts -->
-    <script src="./view/js/time.js" defer></script>
-    <script type="module" src="./view/js/view.js" defer></script>
-    
-    <!-- Font Awesome; Importação da fonte de caracteres especiais -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<title>Clima APP</title>
 
-</head>
-<body>
-    <main>
-        <div class="container">
-            <!-- Cabeçalho do APP -->
-            <header class="header" id="header-App">
-                <!-- Cidade -->
-                <h1 id="city_name">Cidade</h1>
-                <!-- Campo de busca -->
-                <label for="search" id="label_Search">
-                    <input type="search" name="search" id="search_Field" autocomplete="off">
-                    <button id="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </label>
-            </header>
-            <!-- Conteúdo principal -->
-            <section class="main-content">
-                <div class="current-prevision">
-                    <!-- Data e Hora -->
-                    <div class="current-prevision-times">
-                        <div class="prevision-date">00 / 00 / 0000</div>
-                        <div class="prevision-time">00:00</div>
-                    </div>
-                    <!-- Temperatura -->
-                    <div class="temperature-content">
-                        <!-- Imagem -->
-                        <img src="" alt="imagem do tempo" id="climate_image">
-                        <!-- Temperatura -->
-                        <h2 class="temperature" id="temperature"></h2>
-                    </div>
-                    <!-- Mais informações -->
-                    <div class="more-informations">
-                        <!-- Descrição -->
-                        <div class="description" id="prevision-description"></div>
-                        <!-- Umidade -->
-                        <div class="humidity" id="prevision-humidity">Umidade:</div>
-                        <!-- Máxima e mínima -->
-                        <div class="polaritys-day">
-                            <div class="max-polarity">
-                                <sup>Max:</sup><p id="max_temperature"></p> 
-                            </div>
-                            <div class="min-polarity">
-                                <sup>Min:</sup><p id="min_temperature"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Previsão de 7 dias -->
-            <section class="forecasts-content">
-                <div class="weekly-forecasts" id="weekly-forecasts"></div>
-            </section>
-            <!-- Rodapé -->
-            <footer>
-                Desenvolvido por: Everton Martins
-                <ul class="social-media-list">
-                    <!-- Portfólio -->
-                    <li class="social-media-list-item">
-                        <a class="social-media-list-item-link" href="https://everton-martins.netlify.app/" target="_blank">
-                            <i class="fa-solid fa-globe"></i>
-                        </a>
-                    </li>
-                    <!-- Linkein -->
-                    <li class="social-media-list-item">
-                        <a class="social-media-list-item-link" href="https://www.linkedin.com/in/everton-martins-21160721a" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <!-- GitHub -->
-                    <li class="social-media-list-item">
-                        <a class="social-media-list-item-link" href="https://github.com/evertonmartins707" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <!-- Repositório projeto -->
-                    <li class="social-media-list-item">
-                        <a class="social-media-list-item-link" href="https://github.com/evertonmartins707/app_clima" target="_blank">
-                            <i class="fa-solid fa-code-fork"></i>
-                        </a>
-                    </li>
-                </ul>
-            </footer>
-        </div>
-    </main>
-    <script>
+		<!-- Folhas de estilo -->
+		<link rel="stylesheet" href="view/styles/style.css" />
+		<link rel="stylesheet" href="view/styles/style_mobile.css" />
 
-        let inputSearch = document.querySelector("#search_Field")
-        const labelSearch = document.querySelector("#label_Search")
-        
-        inputSearch.addEventListener("focus", function(){labelSearch.classList.add("in-focus")})
-        inputSearch.addEventListener("focusout", function(){labelSearch.classList.remove("in-focus")})
-        
-    </script>
-</body>
+		<!-- Scripts -->
+		<script src="./view/js/time.js" defer></script>
+		<script type="module" src="./view/js/view.js" defer></script>
+
+		<!-- Font Awesome; Importação da fonte de caracteres especiais -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<!-- Cabeçalho do APP -->
+				<header class="header" id="header-App">
+					<!-- Cidade -->
+					<h1 id="city_name">Cidade</h1>
+					<!-- Campo de busca -->
+					<label for="search" id="label_Search">
+						<input
+							type="search"
+							name="search"
+							id="search_Field"
+							autocomplete="off"
+						/>
+						<button id="btn_search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</label>
+				</header>
+				<!-- Conteúdo principal -->
+				<section class="main-content">
+					<div class="current-prevision">
+						<!-- Data e Hora -->
+						<div class="current-prevision-times">
+							<div class="prevision-date">00 / 00 / 0000</div>
+							<div class="prevision-time">00:00</div>
+						</div>
+						<!-- Temperatura -->
+						<div class="temperature-content">
+							<!-- Imagem -->
+							<img src="" alt="imagem do tempo" id="climate_image" />
+							<!-- Temperatura -->
+							<h2 class="temperature" id="temperature"></h2>
+						</div>
+						<!-- Mais informações -->
+						<div class="more-informations">
+							<!-- Descrição -->
+							<div class="description" id="prevision-description"></div>
+							<!-- Umidade -->
+							<div class="humidity" id="prevision-humidity">Umidade:</div>
+							<!-- Máxima e mínima -->
+							<div class="polaritys-day">
+								<div class="max-polarity">
+									<sup>Max:</sup>
+									<p id="max_temperature"></p>
+								</div>
+								<div class="min-polarity">
+									<sup>Min:</sup>
+									<p id="min_temperature"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Previsão de 7 dias -->
+				<section class="forecasts-content">
+					<div class="weekly-forecasts" id="weekly-forecasts"></div>
+				</section>
+				<!-- Rodapé -->
+				<footer>
+					Desenvolvido por: Everton Martins
+					<ul class="social-media-list">
+						<!-- Portfólio -->
+						<li class="social-media-list-item">
+							<a
+								class="social-media-list-item-link"
+								href="https://everton-martins.netlify.app/"
+								target="_blank"
+							>
+								<i class="fa-solid fa-globe"></i>
+							</a>
+						</li>
+						<!-- Linkein -->
+						<li class="social-media-list-item">
+							<a
+								class="social-media-list-item-link"
+								href="https://www.linkedin.com/in/everton-martins-21160721a"
+								target="_blank"
+							>
+								<i class="fab fa-linkedin"></i>
+							</a>
+						</li>
+						<!-- GitHub -->
+						<li class="social-media-list-item">
+							<a
+								class="social-media-list-item-link"
+								href="https://github.com/evertonmartins707"
+								target="_blank"
+							>
+								<i class="fab fa-github"></i>
+							</a>
+						</li>
+						<!-- Repositório projeto -->
+						<li class="social-media-list-item">
+							<a
+								class="social-media-list-item-link"
+								href="https://github.com/evertonmartins707/app_clima"
+								target="_blank"
+							>
+								<i class="fa-solid fa-code-fork"></i>
+							</a>
+						</li>
+					</ul>
+				</footer>
+			</div>
+		</main>
+		<script>
+			let inputSearch = document.querySelector('#search_Field');
+			const labelSearch = document.querySelector('#label_Search');
+
+			inputSearch.addEventListener('focus', function () {
+				labelSearch.classList.add('in-focus');
+			});
+			inputSearch.addEventListener('focusout', function () {
+				labelSearch.classList.remove('in-focus');
+			});
+		</script>
+	</body>
 </html>
