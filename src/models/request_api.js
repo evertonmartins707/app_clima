@@ -21,6 +21,16 @@ const resultApiCity = (value_city, key) => {
 	return result;
 };
 
+const resultApiIp = (key) => {
+	const result = fetch(`${api.baseApi}?key=${key}&user_ip=remote`)
+		.then((res) => res.json())
+		.then((data) => {
+			return data;
+		})
+		.catch((err) => console.log(err));
+	return result;
+};
+
 // Chamada por WOEID
 const resultApiWoeid = () => {
 	const result = fetch(
@@ -42,4 +52,5 @@ const resultApiWoeid = () => {
 module.exports = {
 	resultApiCity,
 	resultApiWoeid,
+	resultApiIp,
 };
