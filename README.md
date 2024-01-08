@@ -1,19 +1,19 @@
 # APP CLIMA
 
-Deploy: [https://weatherapp-evertonmartins.netlify.app/]()
+Deploy: [weatherapp-evertonmartins.netlify.app/](https://weatherapp-evertonmartins.netlify.app/)
 
 ## Desenvolvedor
 
 - Título: `APP CLIMA`
 - Autor: `Everton Martins`
-- LinkedIn: [https://www.linkedin.com/in/everton-martins-21160721a]()
+- LinkedIn: [linkedin.com/in/everton-martins-21160721a](https://www.linkedin.com/in/everton-martins-21160721a)
 
 ## Descrição
 O projeto `APP CLIMA` é um projeto de estudos pessoal, criado para aprender sobre requisições em API's, ele emgloba o _frontend_ e o _backend_ para funcionamento, usando um servidor criado com a biblioteca EXPRESS do NODE JS.
 
-Seu funcionamento consiste em uma chamada á própria API localizada no _backend_, que por sua vez realiza uma chamada á HG Weather, API da HG BRASIL ([https://hgbrasil.com/status/weather]()).
+Seu funcionamento consiste em uma chamada á própria API localizada no _backend_, que por sua vez realiza uma chamada á HG Weather, API da HG BRASIL ([https://hgbrasil.com/status/weather](https://hgbrasil.com/status/weather)).
 - Para mais informações sobre o funcionamento do _backend_ verificar o README que se encontra na _branch_ 'backend'.
-[https://github.com/evertonmartins707/app_clima/tree/backend]()
+[./app_clima/tree/backend](https://github.com/evertonmartins707/app_clima/tree/backend)
 
 Todo o sistema é implementado com funções de tratamento de erros por código:
 
