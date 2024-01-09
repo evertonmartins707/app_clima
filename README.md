@@ -61,7 +61,7 @@ Na branch 'BACKEND' está localizado o backend do projeto.
 
 - Nodemon (v3.0.2)
 
-**ATENÇÃO:** Essas são as versões mínimas para funcionamento.
+**ATENÇÃO:** Essas são as versões utilizadas no projeto, não são restritas apenas á elas para funcionamento.
 
 ## Uso
 
